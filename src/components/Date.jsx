@@ -12,9 +12,13 @@ function Date({ date, day, todos }) {
       >
         {date}
       </div>
-      <ul className="p-2 text-lg h-20">
+      <ul className="p-2 text-lg min-h-[80px]">
         {todos.map((v, i) => {
-          return <li key={i}>{v}</li>;
+          return (
+            <li className="truncate" key={i}>
+              {v}
+            </li>
+          );
         })}
       </ul>
     </li>
